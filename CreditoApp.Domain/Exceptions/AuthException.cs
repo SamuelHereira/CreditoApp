@@ -1,4 +1,4 @@
-﻿namespace TODOApp.Domain.Exceptions
+﻿namespace CreditoApp.Domain.Exceptions
 {
     public class AuthException : CustomException
     {

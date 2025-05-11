@@ -11,7 +11,8 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
-using TODOApp.Domain.Exceptions;
+using CreditoApp.Domain.Exceptions;
+
 
 var builder = WebApplication.CreateBuilder(args);
 

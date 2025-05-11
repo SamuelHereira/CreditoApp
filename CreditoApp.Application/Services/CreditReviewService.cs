@@ -2,7 +2,8 @@ using CreditoApp.Application.Interfaces.Services;
 using CreditoApp.Domain.Enums;
 using CreditoApp.Domain.Models.Responses.CreditApp;
 using CreditoApp.Infrastructure.Interfaces.Repositories;
-using TODOApp.Domain.Exceptions;
+using CreditoApp.Domain.Exceptions;
+
 
 namespace CreditoApp.Application.Services
 {
