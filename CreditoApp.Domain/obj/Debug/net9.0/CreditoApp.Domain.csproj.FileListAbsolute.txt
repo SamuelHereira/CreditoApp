@@ -1,0 +1,12 @@
+C:\Users\DETPC\Downloads\CreditoApp\CreditoApp.Domain\bin\Debug\net9.0\CreditoApp.Domain.deps.json
+C:\Users\DETPC\Downloads\CreditoApp\CreditoApp.Domain\bin\Debug\net9.0\CreditoApp.Domain.dll
+C:\Users\DETPC\Downloads\CreditoApp\CreditoApp.Domain\bin\Debug\net9.0\CreditoApp.Domain.pdb
+C:\Users\DETPC\Downloads\CreditoApp\CreditoApp.Domain\obj\Debug\net9.0\CreditoApp.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DETPC\Downloads\CreditoApp\CreditoApp.Domain\obj\Debug\net9.0\CreditoApp.Domain.AssemblyInfoInputs.cache
+C:\Users\DETPC\Downloads\CreditoApp\CreditoApp.Domain\obj\Debug\net9.0\CreditoApp.Domain.AssemblyInfo.cs
+C:\Users\DETPC\Downloads\CreditoApp\CreditoApp.Domain\obj\Debug\net9.0\CreditoApp.Domain.csproj.CoreCompileInputs.cache
+C:\Users\DETPC\Downloads\CreditoApp\CreditoApp.Domain\obj\Debug\net9.0\CreditoApp.Domain.sourcelink.json
+C:\Users\DETPC\Downloads\CreditoApp\CreditoApp.Domain\obj\Debug\net9.0\CreditoApp.Domain.dll
+C:\Users\DETPC\Downloads\CreditoApp\CreditoApp.Domain\obj\Debug\net9.0\refint\CreditoApp.Domain.dll
+C:\Users\DETPC\Downloads\CreditoApp\CreditoApp.Domain\obj\Debug\net9.0\CreditoApp.Domain.pdb
+C:\Users\DETPC\Downloads\CreditoApp\CreditoApp.Domain\obj\Debug\net9.0\ref\CreditoApp.Domain.dll
