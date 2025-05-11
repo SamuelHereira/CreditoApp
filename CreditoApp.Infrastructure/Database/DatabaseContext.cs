@@ -14,7 +14,7 @@ namespace CreditoApp.Infrastructure.Database
 
         public DatabaseContext(IConfiguration configuration)
         {
-            _connectionString = configuration.GetConnectionString("Default") ?? throw new InvalidOperationException("Connection string 'Default' not found.");
+            _connectionString = configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'Default' not found.");
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -25,25 +25,42 @@ namespace CreditoApp.Infrastructure.Database
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<User>().ToTable("Users").HasKey(u => u.Id);
+            // Users
+            modelBuilder.Entity<User>()
+                .ToTable("Users")
+                .HasKey(u => u.Id);
 
-            modelBuilder.Entity<Role>().ToTable("UserRoles").HasKey(r => r.Id);
+            // Roles
+            modelBuilder.Entity<Role>()
+                .ToTable("Roles")
+                .HasKey(r => r.Id);
+
+            // UserRoles
+            modelBuilder.Entity<UserRoles>()
+                .ToTable("UserRoles");
 
             modelBuilder.Entity<UserRoles>()
-                .ToTable("UserRoles")
+                .HasKey(ur => ur.Id); // Asegúrate de tener esta clave primaria
+
+            modelBuilder.Entity<UserRoles>()
                 .HasOne(ur => ur.User)
-                .WithMany(x => x.UserRoles)
-                .HasForeignKey(ur => ur.UserId)
+                .WithMany(u => u.UserRoles)
+                .HasForeignKey(ur => ur.UserId);
+
+            modelBuilder.Entity<UserRoles>()
+                .HasOne(ur => ur.Role)
+                .WithMany(r => r.UserRoles)
                 .HasForeignKey(ur => ur.RoleId);
 
+            // CreditRequests
             modelBuilder.Entity<CreditRequest>()
                 .ToTable("CreditRequests")
                 .HasKey(cr => cr.Id);
         }
 
         public DbSet<User> Users { get; set; }
-        public DbSet<Role> UserRoles { get; set; }
-        public DbSet<UserRoles> CreditRequestHistories { get; set; }
+        public DbSet<Role> Roles { get; set; }
+        public DbSet<UserRoles> UserRoles { get; set; }
         public DbSet<CreditRequest> CreditRequests { get; set; }
     }
 }

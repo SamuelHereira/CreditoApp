@@ -17,8 +17,16 @@ namespace CreditoApp.Infrastructure.Repositories
 
         public async Task<User> CreateUser(User user)
         {
+            var role = await _context.Roles.FirstOrDefaultAsync(r => r.Name == "Applicant");
+
+            user.UserRoles = new List<UserRoles>
+            {
+                new UserRoles { RoleId = role.Id }
+            };
+
             await _context.Users.AddAsync(user);
             await _context.SaveChangesAsync();
+
             return user;
         }
 
