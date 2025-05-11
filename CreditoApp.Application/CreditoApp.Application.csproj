@@ -2,6 +2,11 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CreditoApp.Domain\CreditoApp.Domain.csproj" />
+    <ProjectReference Include="..\CreditoApp.Infrastructure\CreditoApp.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
   </ItemGroup>
 
   <PropertyGroup>
