@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "KlYoerB7RQxx5jJTLtxrWiGsDHNVlU93951vJ1eLaM8=",
+  "Source": "CreditoApp.API",
+  "BasePath": "_content/CreditoApp.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
