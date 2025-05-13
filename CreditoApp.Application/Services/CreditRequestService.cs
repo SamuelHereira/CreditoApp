@@ -2,6 +2,7 @@
 using CreditoApp.Application.Interfaces.Services;
 using CreditoApp.Domain.Entitites.CreditApp;
 using CreditoApp.Domain.Enums;
+using CreditoApp.Domain.Exceptions;
 using CreditoApp.Domain.Models.Requests.CreditApp;
 using CreditoApp.Domain.Models.Responses.CreditApp;
 using CreditoApp.Infrastructure.Interfaces.Repositories;
@@ -24,7 +25,11 @@ namespace CreditoApp.Application.Services
             {
                 UserId = request.UserId,
                 Amount = request.Amount,
+                TermMonths = request.TermMonths,
+                MonthlyIncome = request.MonthlyIncome,
+                JobSeniorityYears = request.JobSeniorityYears,
                 Status = CreditStatus.Pending,
+                RequestDate = DateTime.UtcNow,
                 CreatedAt = DateTime.UtcNow
             };
             var createdCreditRequest = await _creditRequestRepository.CreateCreditRequest(creditRequest);
@@ -58,8 +63,28 @@ namespace CreditoApp.Application.Services
                 TermMonths = cr.TermMonths,
                 MonthlyIncome = cr.MonthlyIncome,
                 JobSeniorityYears = cr.JobSeniorityYears,
+                RequestDate = cr.RequestDate,
                 Status = cr.Status.ToString(),
             }).ToList();
+        }
+
+        public async Task<CreditRequestResponse> DeleteCreditRequest(int requestId)
+        {
+            var creditRequest = await _creditRequestRepository.DeleteCreditRequest(requestId);
+            if (creditRequest == null)
+            {
+                throw new ClientFaultException("Credit request not found");
+            }
+            return new CreditRequestResponse
+            {
+                Id = creditRequest.Id,
+                UserId = creditRequest.UserId,
+                Amount = creditRequest.Amount,
+                TermMonths = creditRequest.TermMonths,
+                MonthlyIncome = creditRequest.MonthlyIncome,
+                JobSeniorityYears = creditRequest.JobSeniorityYears,
+                Status = creditRequest.Status.ToString(),
+            };
         }
     }
 }

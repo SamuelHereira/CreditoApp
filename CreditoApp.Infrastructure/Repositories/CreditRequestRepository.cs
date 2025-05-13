@@ -35,5 +35,18 @@ namespace CreditoApp.Infrastructure.Repositories
 
             return creditRequests;
         }
+
+        public async Task<CreditRequest> DeleteCreditRequest(int requestId)
+        {
+            var creditRequest = await _context.CreditRequests.FindAsync(requestId);
+            if (creditRequest == null)
+            {
+                return null;
+            }
+
+            _context.CreditRequests.Remove(creditRequest);
+            await _context.SaveChangesAsync();
+            return creditRequest;
+        }
     }
 }

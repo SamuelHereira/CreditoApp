@@ -8,5 +8,8 @@ namespace CreditoApp.Application.Interfaces.Services
     {
         Task<CreditRequestResponse> CreateCreditRequest(CreateCreditRequest request);
         Task<List<CreditRequestResponse>> GetCreditRequestsByUserId(int userId);
+
+        Task<CreditRequestResponse> DeleteCreditRequest(int requestId);
+
     }
 }

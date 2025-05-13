@@ -6,7 +6,7 @@ using CreditoApp.Domain.Models.Requests.Auth;
 using CreditoApp.Domain.Models.Responses.Auth;
 using CreditoApp.Domain.Models.Responses.Shared;
 using CreditoApp.Infrastructure.Interfaces.Repositories;
-using TODOApp.Domain.Exceptions;
+using CreditoApp.Domain.Exceptions;
 namespace CreditoApp.Application.Services
 {
     public class AuthService : IAuthService

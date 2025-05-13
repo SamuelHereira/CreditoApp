@@ -6,6 +6,8 @@ namespace CreditoApp.Infrastructure.Interfaces.Repositories
     {
         Task<CreditRequest> CreateCreditRequest(CreditRequest creditRequest);
         Task<List<CreditRequest>> GetCreditRequestsByUserId(int userId);
+
+        Task<CreditRequest> DeleteCreditRequest(int requestId);
     }
 
 }

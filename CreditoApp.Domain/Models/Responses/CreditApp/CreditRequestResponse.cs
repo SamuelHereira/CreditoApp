@@ -8,6 +8,8 @@ namespace CreditoApp.Domain.Models.Responses.CreditApp
         public int TermMonths { get; set; }
         public decimal MonthlyIncome { get; set; }
         public int JobSeniorityYears { get; set; }
+
+        public DateTime RequestDate { get; set; }
         public string Status { get; set; } = null!;
 
     }

@@ -57,6 +57,13 @@ namespace CreditoApp.API.Controllers
             return Ok(new SuccessResponse<List<CreditRequestResponse>>(200, "Credit requests retrieved successfully", response));
         }
 
+        [HttpDelete("{requestId}")]
+        public async Task<ActionResult> DeleteCreditRequest(int requestId)
+        {
+            await _creditRequestService.DeleteCreditRequest(requestId);
+            return Ok(new SuccessResponse<object>(200, "Credit request deleted successfully", null));
+        }
+
 
     }
 }

@@ -30,6 +30,12 @@ namespace CreditoApp.Infrastructure.Database
                 .ToTable("Users")
                 .HasKey(u => u.Id);
 
+            modelBuilder.Entity<User>()
+                .HasMany(u => u.UserRoles)
+                .WithOne(ur => ur.User)
+                .HasForeignKey(ur => ur.UserId);
+
+
             // Roles
             modelBuilder.Entity<Role>()
                 .ToTable("Roles")
