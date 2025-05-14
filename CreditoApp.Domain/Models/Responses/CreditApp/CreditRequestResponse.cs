@@ -1,3 +1,5 @@
+using CreditoApp.Domain.Entitites.Auth;
+
 namespace CreditoApp.Domain.Models.Responses.CreditApp
 {
     public class CreditRequestResponse
@@ -10,7 +12,12 @@ namespace CreditoApp.Domain.Models.Responses.CreditApp
         public int JobSeniorityYears { get; set; }
 
         public DateTime RequestDate { get; set; }
+
+        public DateTime? UpdateDate { get; set; }
         public string Status { get; set; } = null!;
+
+        public User? User { get; set; } = null!;
+
 
     }
 }

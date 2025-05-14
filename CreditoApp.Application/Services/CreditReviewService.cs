@@ -10,15 +10,16 @@ namespace CreditoApp.Application.Services
     public class CreditReviewService : ICreditReviewService
     {
         private readonly ICreditReviewRepository _creditReviewRepository;
+        private readonly AuditLogger _auditLogger;
 
-        public CreditReviewService(ICreditReviewRepository creditReviewRepository)
+        public CreditReviewService(ICreditReviewRepository creditReviewRepository, AuditLogger auditLogger)
         {
             _creditReviewRepository = creditReviewRepository;
         }
 
-        public async Task<List<CreditRequestResponse>> GetCreditRequests()
+        public async Task<List<CreditRequestResponse>> GetCreditRequests(int? status = null)
         {
-            var creditRequests = await _creditReviewRepository.GetCreditRequests();
+            var creditRequests = await _creditReviewRepository.GetCreditRequests(status);
             return creditRequests.Select(cr => new CreditRequestResponse
             {
                 Id = cr.Id,
@@ -28,6 +29,9 @@ namespace CreditoApp.Application.Services
                 JobSeniorityYears = cr.JobSeniorityYears,
                 MonthlyIncome = cr.MonthlyIncome,
                 TermMonths = cr.TermMonths,
+                RequestDate = cr.RequestDate,
+                User = cr.User,
+                UpdateDate = cr.UpdatedAt
             }).ToList();
         }
 
@@ -47,6 +51,9 @@ namespace CreditoApp.Application.Services
                 JobSeniorityYears = creditRequest.JobSeniorityYears,
                 MonthlyIncome = creditRequest.MonthlyIncome,
                 TermMonths = creditRequest.TermMonths,
+                RequestDate = creditRequest.RequestDate,
+                User = creditRequest.User,
+                UpdateDate = creditRequest.UpdatedAt
             };
         }
 
@@ -60,6 +67,18 @@ namespace CreditoApp.Application.Services
             {
                 throw new ClientFaultException("Credit request not found");
             }
+
+            if (creditRequest.Status == CreditStatus.Approved)
+            {
+                await _auditLogger.Log("Update", "CreditRequest", $"Credit request approved: {creditRequest.Id}");
+            }
+
+
+            if (creditRequest.Status == CreditStatus.Rejected)
+            {
+                await _auditLogger.Log("Update", "CreditRequest", $"Credit request rejected: {creditRequest.Id}");
+            }
+
 
             return new CreditRequestResponse
             {

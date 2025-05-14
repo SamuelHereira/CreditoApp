@@ -1,3 +1,4 @@
+using CreditoApp.Domain.Entities.Shared;
 using CreditoApp.Domain.Entitites.Auth;
 using CreditoApp.Domain.Entitites.CreditApp;
 using Microsoft.EntityFrameworkCore;
@@ -68,5 +69,6 @@ namespace CreditoApp.Infrastructure.Database
         public DbSet<Role> Roles { get; set; }
         public DbSet<UserRoles> UserRoles { get; set; }
         public DbSet<CreditRequest> CreditRequests { get; set; }
+        public DbSet<Audit> Audits { get; set; } = null!;
     }
 }

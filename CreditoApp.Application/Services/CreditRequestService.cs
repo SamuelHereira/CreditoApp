@@ -12,10 +12,12 @@ namespace CreditoApp.Application.Services
     public class CreditRequestService : ICreditRequestService
     {
         private readonly ICreditRequestRepository _creditRequestRepository;
+        private readonly AuditLogger _auditLogger;
 
-        public CreditRequestService(ICreditRequestRepository creditRequestRepository)
+        public CreditRequestService(ICreditRequestRepository creditRequestRepository, AuditLogger auditLogger)
         {
             _creditRequestRepository = creditRequestRepository;
+            _auditLogger = auditLogger;
         }
 
         public async Task<CreditRequestResponse> CreateCreditRequest(CreateCreditRequest request)
@@ -33,6 +35,12 @@ namespace CreditoApp.Application.Services
                 CreatedAt = DateTime.UtcNow
             };
             var createdCreditRequest = await _creditRequestRepository.CreateCreditRequest(creditRequest);
+
+            await _auditLogger.Log(
+                "Create",
+                "CreditRequest",
+                $"Credit request created for user {request.UserId} with amount {request.Amount} and term {request.TermMonths} months."
+            );
 
             return new CreditRequestResponse
             {
@@ -75,6 +83,13 @@ namespace CreditoApp.Application.Services
             {
                 throw new ClientFaultException("Credit request not found");
             }
+
+            await _auditLogger.Log(
+                "Delete",
+                "CreditRequest",
+                $"Credit request deleted: {creditRequest.Id}"
+            );
+
             return new CreditRequestResponse
             {
                 Id = creditRequest.Id,

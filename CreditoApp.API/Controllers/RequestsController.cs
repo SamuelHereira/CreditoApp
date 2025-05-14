@@ -22,9 +22,11 @@ namespace CreditoApp.API.Controllers
 
         [HttpGet()]
         [Authorize(Roles = "Analyst")]
-        public async Task<ActionResult<List<CreditRequestResponse>>> GetCreditRequests()
+        public async Task<ActionResult<List<CreditRequestResponse>>> GetCreditRequests(
+            [FromQuery] int? status = null
+        )
         {
-            var response = await _creditReviewService.GetCreditRequests();
+            var response = await _creditReviewService.GetCreditRequests(status);
             return Ok(new SuccessResponse<List<CreditRequestResponse>>(200, "Credit requests retrieved successfully", response));
         }
 
@@ -36,10 +38,10 @@ namespace CreditoApp.API.Controllers
         }
 
         [HttpPut("{requestId}/status")]
-        [Authorize(Roles = "Analyst")]
-        public async Task<ActionResult<CreditRequestResponse>> UpdateCreditRequestStatus(int requestId, [FromBody] string status)
+        // [Authorize(Roles = "Analyst")]
+        public async Task<ActionResult<CreditRequestResponse>> UpdateCreditRequestStatus(int requestId, [FromBody] UpdateCreditRequestStatus request)
         {
-            var response = await _creditReviewService.UpdateCreditRequestStatus(requestId, status);
+            var response = await _creditReviewService.UpdateCreditRequestStatus(requestId, request.Status.ToString());
             return Ok(new SuccessResponse<CreditRequestResponse>(200, "Credit request status updated successfully", response));
         }
 

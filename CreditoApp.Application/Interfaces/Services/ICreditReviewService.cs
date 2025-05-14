@@ -5,7 +5,7 @@ namespace CreditoApp.Application.Interfaces.Services
 {
     public interface ICreditReviewService
     {
-        Task<List<CreditRequestResponse>> GetCreditRequests();
+        Task<List<CreditRequestResponse>> GetCreditRequests(int? status = null);
         Task<CreditRequestResponse> GetCreditRequestById(int requestId);
         Task<CreditRequestResponse> UpdateCreditRequestStatus(int requestId, string status);
     }

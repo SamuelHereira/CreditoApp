@@ -1,5 +1,6 @@
 using CreditoApp.Domain.Entitites.CreditApp;
 using CreditoApp.Domain.Enums;
+using CreditoApp.Domain.Models.Requests.CreditApp;
 using CreditoApp.Infrastructure.Database;
 using CreditoApp.Infrastructure.Interfaces.Repositories;
 using Microsoft.EntityFrameworkCore;
@@ -16,9 +17,14 @@ namespace CreditoApp.Infrastructure.Repositories
             _context = context;
         }
 
-        public async Task<List<CreditRequest>> GetCreditRequests()
+        public async Task<List<CreditRequest>> GetCreditRequests(
+            int? status = null
+        )
         {
-            return await _context.CreditRequests.ToListAsync();
+            return await _context.CreditRequests
+                .Include(cr => cr.User)
+                .Where(cr => status == null || cr.Status == (CreditStatus)status)
+                .ToListAsync();
         }
 
         public async Task<CreditRequest> GetCreditRequestById(int requestId)
@@ -44,6 +50,7 @@ namespace CreditoApp.Infrastructure.Repositories
             {
                 throw new Exception("Credit request not found");
             }
+
             creditRequest.Status = status;
             await _context.SaveChangesAsync();
 

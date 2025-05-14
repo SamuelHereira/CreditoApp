@@ -1,4 +1,6 @@
 ﻿
+using CreditoApp.Domain.Entitites.Auth;
+
 namespace CreditoApp.Domain.Models.Responses.Auth
 {
     public class LoginResponse
@@ -9,5 +11,7 @@ namespace CreditoApp.Domain.Models.Responses.Auth
         public string Lastname { get; set; } = null!;
         public string Email { get; set; } = null!;
         public List<string> Roles { get; set; } = new();
+
+        public User? User { get; set; } = null!;
     }
 }
