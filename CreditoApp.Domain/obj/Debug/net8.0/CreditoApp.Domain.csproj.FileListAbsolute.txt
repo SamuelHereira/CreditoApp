@@ -1,0 +1,12 @@
+C:\Users\shereira\Documents\GitHub\CreditoApp\CreditoApp.Domain\bin\Debug\net8.0\CreditoApp.Domain.deps.json
+C:\Users\shereira\Documents\GitHub\CreditoApp\CreditoApp.Domain\bin\Debug\net8.0\CreditoApp.Domain.dll
+C:\Users\shereira\Documents\GitHub\CreditoApp\CreditoApp.Domain\bin\Debug\net8.0\CreditoApp.Domain.pdb
+C:\Users\shereira\Documents\GitHub\CreditoApp\CreditoApp.Domain\obj\Debug\net8.0\CreditoApp.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\shereira\Documents\GitHub\CreditoApp\CreditoApp.Domain\obj\Debug\net8.0\CreditoApp.Domain.AssemblyInfoInputs.cache
+C:\Users\shereira\Documents\GitHub\CreditoApp\CreditoApp.Domain\obj\Debug\net8.0\CreditoApp.Domain.AssemblyInfo.cs
+C:\Users\shereira\Documents\GitHub\CreditoApp\CreditoApp.Domain\obj\Debug\net8.0\CreditoApp.Domain.csproj.CoreCompileInputs.cache
+C:\Users\shereira\Documents\GitHub\CreditoApp\CreditoApp.Domain\obj\Debug\net8.0\CreditoApp.Domain.sourcelink.json
+C:\Users\shereira\Documents\GitHub\CreditoApp\CreditoApp.Domain\obj\Debug\net8.0\CreditoApp.Domain.dll
+C:\Users\shereira\Documents\GitHub\CreditoApp\CreditoApp.Domain\obj\Debug\net8.0\refint\CreditoApp.Domain.dll
+C:\Users\shereira\Documents\GitHub\CreditoApp\CreditoApp.Domain\obj\Debug\net8.0\CreditoApp.Domain.pdb
+C:\Users\shereira\Documents\GitHub\CreditoApp\CreditoApp.Domain\obj\Debug\net8.0\ref\CreditoApp.Domain.dll

@@ -111,6 +111,8 @@ builder.Services.AddScoped<ICreditRequestRepository, CreditRequestRepository>();
 
 builder.Services.AddScoped<JWTUtils>();
 builder.Services.AddScoped<PasswordUtils>();
+builder.Services.AddScoped<AuditLogger>();
+
 
 builder.Services.AddHttpContextAccessor();
 

@@ -15,6 +15,7 @@ namespace CreditoApp.Application.Services
         public CreditReviewService(ICreditReviewRepository creditReviewRepository, AuditLogger auditLogger)
         {
             _creditReviewRepository = creditReviewRepository;
+            _auditLogger = auditLogger;
         }
 
         public async Task<List<CreditRequestResponse>> GetCreditRequests(int? status = null)

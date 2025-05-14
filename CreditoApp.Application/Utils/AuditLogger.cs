@@ -1,6 +1,7 @@
 using CreditoApp.Domain.Entities.Shared;
 using CreditoApp.Infrastructure.Database;
 using Microsoft.AspNetCore.Http;
+using System.Security.Claims;
 public class AuditLogger
 {
     private readonly DatabaseContext _context;
@@ -14,14 +15,14 @@ public class AuditLogger
 
     public async Task Log(string action, string entity, string details)
     {
-        var user = _httpContext.HttpContext?.User?.Identity?.Name ?? "Anonymous";
+       var userId = int.Parse(_httpContext.HttpContext?.User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "0");
 
         _context.Audits.Add(new Audit
         {
             Action = action,
             Entity = entity,
             Details = details,
-            UserId = _httpContext.HttpContext?.User?.FindFirst("UserId")?.Value != null ? int.Parse(_httpContext.HttpContext.User.FindFirst("UserId").Value) : null,
+            UserId = userId,
             PerformedAt = DateTime.UtcNow
         });
 

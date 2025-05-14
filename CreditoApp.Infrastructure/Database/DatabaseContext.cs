@@ -63,6 +63,10 @@ namespace CreditoApp.Infrastructure.Database
             modelBuilder.Entity<CreditRequest>()
                 .ToTable("CreditRequests")
                 .HasKey(cr => cr.Id);
+
+            modelBuilder.Entity<Audit>()
+                .ToTable("Audits")
+                .HasKey(a => a.Id);
         }
 
         public DbSet<User> Users { get; set; }
