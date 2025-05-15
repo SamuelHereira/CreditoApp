@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CreditoApp.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a9773d94d53188ffa764b9c76fdfeb78736fd145")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+582ad6a14e3a5bc320136e518db1cc5a5b6bc895")]
 [assembly: System.Reflection.AssemblyProductAttribute("CreditoApp.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CreditoApp.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

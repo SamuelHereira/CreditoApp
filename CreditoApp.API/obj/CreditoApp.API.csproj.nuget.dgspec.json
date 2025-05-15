@@ -1,36 +1,42 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\shereira\\Documents\\GitHub\\CreditoApp\\CreditoApp.API\\CreditoApp.API.csproj": {}
+    "C:\\Users\\DETPC\\Downloads\\CreditoApp\\CreditoApp.API\\CreditoApp.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\shereira\\Documents\\GitHub\\CreditoApp\\CreditoApp.API\\CreditoApp.API.csproj": {
+    "C:\\Users\\DETPC\\Downloads\\CreditoApp\\CreditoApp.API\\CreditoApp.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\shereira\\Documents\\GitHub\\CreditoApp\\CreditoApp.API\\CreditoApp.API.csproj",
+        "projectUniqueName": "C:\\Users\\DETPC\\Downloads\\CreditoApp\\CreditoApp.API\\CreditoApp.API.csproj",
         "projectName": "CreditoApp.API",
-        "projectPath": "C:\\Users\\shereira\\Documents\\GitHub\\CreditoApp\\CreditoApp.API\\CreditoApp.API.csproj",
-        "packagesPath": "C:\\Users\\shereira\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\shereira\\Documents\\GitHub\\CreditoApp\\CreditoApp.API\\obj\\",
+        "projectPath": "C:\\Users\\DETPC\\Downloads\\CreditoApp\\CreditoApp.API\\CreditoApp.API.csproj",
+        "packagesPath": "C:\\Users\\DETPC\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\DETPC\\Downloads\\CreditoApp\\CreditoApp.API\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\shereira\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\DETPC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\shereira\\Documents\\GitHub\\CreditoApp\\CreditoApp.Application\\CreditoApp.Application.csproj": {
-                "projectPath": "C:\\Users\\shereira\\Documents\\GitHub\\CreditoApp\\CreditoApp.Application\\CreditoApp.Application.csproj"
+              "C:\\Users\\DETPC\\Downloads\\CreditoApp\\CreditoApp.Application\\CreditoApp.Application.csproj": {
+                "projectPath": "C:\\Users\\DETPC\\Downloads\\CreditoApp\\CreditoApp.Application\\CreditoApp.Application.csproj"
               },
-              "C:\\Users\\shereira\\Documents\\GitHub\\CreditoApp\\CreditoApp.Infrastructure\\CreditoApp.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\shereira\\Documents\\GitHub\\CreditoApp\\CreditoApp.Infrastructure\\CreditoApp.Infrastructure.csproj"
+              "C:\\Users\\DETPC\\Downloads\\CreditoApp\\CreditoApp.Infrastructure\\CreditoApp.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\DETPC\\Downloads\\CreditoApp\\CreditoApp.Infrastructure\\CreditoApp.Infrastructure.csproj"
               }
             }
           }
@@ -44,7 +50,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net8.0": {
@@ -88,37 +95,43 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.409/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\shereira\\Documents\\GitHub\\CreditoApp\\CreditoApp.Application\\CreditoApp.Application.csproj": {
+    "C:\\Users\\DETPC\\Downloads\\CreditoApp\\CreditoApp.Application\\CreditoApp.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\shereira\\Documents\\GitHub\\CreditoApp\\CreditoApp.Application\\CreditoApp.Application.csproj",
+        "projectUniqueName": "C:\\Users\\DETPC\\Downloads\\CreditoApp\\CreditoApp.Application\\CreditoApp.Application.csproj",
         "projectName": "CreditoApp.Application",
-        "projectPath": "C:\\Users\\shereira\\Documents\\GitHub\\CreditoApp\\CreditoApp.Application\\CreditoApp.Application.csproj",
-        "packagesPath": "C:\\Users\\shereira\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\shereira\\Documents\\GitHub\\CreditoApp\\CreditoApp.Application\\obj\\",
+        "projectPath": "C:\\Users\\DETPC\\Downloads\\CreditoApp\\CreditoApp.Application\\CreditoApp.Application.csproj",
+        "packagesPath": "C:\\Users\\DETPC\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\DETPC\\Downloads\\CreditoApp\\CreditoApp.Application\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\shereira\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\DETPC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\shereira\\Documents\\GitHub\\CreditoApp\\CreditoApp.Domain\\CreditoApp.Domain.csproj": {
-                "projectPath": "C:\\Users\\shereira\\Documents\\GitHub\\CreditoApp\\CreditoApp.Domain\\CreditoApp.Domain.csproj"
+              "C:\\Users\\DETPC\\Downloads\\CreditoApp\\CreditoApp.Domain\\CreditoApp.Domain.csproj": {
+                "projectPath": "C:\\Users\\DETPC\\Downloads\\CreditoApp\\CreditoApp.Domain\\CreditoApp.Domain.csproj"
               },
-              "C:\\Users\\shereira\\Documents\\GitHub\\CreditoApp\\CreditoApp.Infrastructure\\CreditoApp.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\shereira\\Documents\\GitHub\\CreditoApp\\CreditoApp.Infrastructure\\CreditoApp.Infrastructure.csproj"
+              "C:\\Users\\DETPC\\Downloads\\CreditoApp\\CreditoApp.Infrastructure\\CreditoApp.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\DETPC\\Downloads\\CreditoApp\\CreditoApp.Infrastructure\\CreditoApp.Infrastructure.csproj"
               }
             }
           }
@@ -132,7 +145,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net8.0": {
@@ -163,26 +177,32 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.409/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\shereira\\Documents\\GitHub\\CreditoApp\\CreditoApp.Domain\\CreditoApp.Domain.csproj": {
+    "C:\\Users\\DETPC\\Downloads\\CreditoApp\\CreditoApp.Domain\\CreditoApp.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\shereira\\Documents\\GitHub\\CreditoApp\\CreditoApp.Domain\\CreditoApp.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\DETPC\\Downloads\\CreditoApp\\CreditoApp.Domain\\CreditoApp.Domain.csproj",
         "projectName": "CreditoApp.Domain",
-        "projectPath": "C:\\Users\\shereira\\Documents\\GitHub\\CreditoApp\\CreditoApp.Domain\\CreditoApp.Domain.csproj",
-        "packagesPath": "C:\\Users\\shereira\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\shereira\\Documents\\GitHub\\CreditoApp\\CreditoApp.Domain\\obj\\",
+        "projectPath": "C:\\Users\\DETPC\\Downloads\\CreditoApp\\CreditoApp.Domain\\CreditoApp.Domain.csproj",
+        "packagesPath": "C:\\Users\\DETPC\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\DETPC\\Downloads\\CreditoApp\\CreditoApp.Domain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\shereira\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\DETPC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -200,7 +220,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net8.0": {
@@ -221,34 +242,40 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.409/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\shereira\\Documents\\GitHub\\CreditoApp\\CreditoApp.Infrastructure\\CreditoApp.Infrastructure.csproj": {
+    "C:\\Users\\DETPC\\Downloads\\CreditoApp\\CreditoApp.Infrastructure\\CreditoApp.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\shereira\\Documents\\GitHub\\CreditoApp\\CreditoApp.Infrastructure\\CreditoApp.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\DETPC\\Downloads\\CreditoApp\\CreditoApp.Infrastructure\\CreditoApp.Infrastructure.csproj",
         "projectName": "CreditoApp.Infrastructure",
-        "projectPath": "C:\\Users\\shereira\\Documents\\GitHub\\CreditoApp\\CreditoApp.Infrastructure\\CreditoApp.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\shereira\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\shereira\\Documents\\GitHub\\CreditoApp\\CreditoApp.Infrastructure\\obj\\",
+        "projectPath": "C:\\Users\\DETPC\\Downloads\\CreditoApp\\CreditoApp.Infrastructure\\CreditoApp.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\DETPC\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\DETPC\\Downloads\\CreditoApp\\CreditoApp.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\shereira\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\DETPC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\shereira\\Documents\\GitHub\\CreditoApp\\CreditoApp.Domain\\CreditoApp.Domain.csproj": {
-                "projectPath": "C:\\Users\\shereira\\Documents\\GitHub\\CreditoApp\\CreditoApp.Domain\\CreditoApp.Domain.csproj"
+              "C:\\Users\\DETPC\\Downloads\\CreditoApp\\CreditoApp.Domain\\CreditoApp.Domain.csproj": {
+                "projectPath": "C:\\Users\\DETPC\\Downloads\\CreditoApp\\CreditoApp.Domain\\CreditoApp.Domain.csproj"
               }
             }
           }
@@ -262,7 +289,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net8.0": {
@@ -303,7 +331,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.409/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
